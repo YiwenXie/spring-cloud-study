@@ -15,6 +15,11 @@
 
 
     <dependencies>
+        <!--eureka-client-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
         <dependency>
             <groupId>com.atyiwen.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
