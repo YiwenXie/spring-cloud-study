@@ -18,6 +18,9 @@ eureka:
     service-url:
       #defaultZone: http://localhost:7001/eureka/ # 入驻地址 单机版
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ # 集群版
+  instance:
+    instance-id: payment8001
+    prefer-ip-address: true # 访问路径可以显示IP地址（经实验，不加这个配置现在也能显示，可能是版本问题）
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
