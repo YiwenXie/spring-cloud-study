@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 /**
  * @author ywxie
  * @date 2021/9/8 21:55
- * @describe @FeignClient
+ * @describe @FeignClient:value是被注册服务的服务端名字
  */
 @Component
 @FeignClient(value = "CLOUD-PAYMENT-SERVICE")
@@ -19,4 +19,7 @@ public interface PaymentFeignService {
 
     @GetMapping(value = "/payment/get/{id}")
     CommonResult<Payment> getPaymentById(@PathVariable("id") Long id);
+
+    @GetMapping("/payment/feign/timeout")
+    String paymentFeignTimeout();
 }
